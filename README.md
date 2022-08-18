@@ -42,7 +42,7 @@ print(res) # if <Response [200]> - your product was created
 ### Edit product
 For editting product you should send POST request to this directions `http://127.0.0.1:8000/api/edit-product/<product_id>/`.
 Python3 example
-```
+```python
 import requests
 res = requests.post(
   "http://127.0.0.1:8000/api/edit-product/1/", {
@@ -55,7 +55,7 @@ print(res) # if <Response [200]> - your product was updated
 ### Delete Product
 For editting product you should send POST request to this directions `http://127.0.0.1:8000/api/delete-product/<product_id>/`.
 Python3 example
-```
+```python
 import requests
 res = requests.delete("http://127.0.0.1:8000/api/delete-product/1/")
 
@@ -65,7 +65,7 @@ print(res) # if <Response [202]> - your product was deleted
 ### Create/Edit Product Price
 For editting product priceyou should send POST request to this directions `http://127.0.0.1:8000/api/edit-product-price/<product_id>/`.
 Python3 example
-```
+```python
 import requests
 res = requests.post(
   "http://127.0.0.1:8000/api/edit-product-price/1/", {
@@ -79,7 +79,7 @@ print(res) # if <Response [200]> - your product was updated
 ### All products
 For showing all products you should send GET request to this directions `http://127.0.0.1:8000/api/all/`.
 Python3 example
-```
+```python
 import requests
 res = requests.get("http://127.0.0.1:8000/api/all/")
 print(res.content)
@@ -88,7 +88,7 @@ print(res.content)
 ### All product changes
 For showing all product changes you should send GET request to this directions `http://127.0.0.1:8000/api/product-changes/<product_id>//`.
 Python3 example
-```
+```python
 import requests
 res = requests.get("http://127.0.0.1:8000/api/product-changes/1/")
 print(res.content)
@@ -97,7 +97,7 @@ print(res.content)
 ### Average Price
 To calculate avarage price, send POST request to this link `http://127.0.0.1:8000/api/calculate-product-prices/<product_id>/`
 Python3 example
-```
+```python
 import requests
 res = requests.post(
   "http://127.0.0.1:8000/api/product-changes/1/", {
