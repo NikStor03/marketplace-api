@@ -28,10 +28,7 @@ def api_overview(request):
 
 @api_view(['POST'])
 def add_items(request):
-    """
-    :param request:
-    :return Response(product.data):
-    """
+
     product = ProductSerializer(data=request.data)
 
     if ProductModel.objects.filter(**request.data).exists():

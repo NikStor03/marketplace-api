@@ -1,31 +1,10 @@
 from django.db import models
 
-"""
-{
-"name": "Test",
-"description": "test",
-"start_date": "2022-08-17 19:56:35.584154",
-"end_date": "2022-08-17 19:56:35.584154",
-"price": 20.00
-}
-"""
-"""
-{
-"name": "Test Updated",
-"description": "test updated",
-"start_date": "2022-08-17 19:56:35.584154",
-"end_date": "2022-08-17 19:56:35.584154",
-"price": 0.00
-}
-{
-"start_date": "2022-01-20",
-"end_date": "2022-09-10"
-}
-"""
-
 
 class ProductModel(models.Model):
-
+    """
+        Model for product
+    """
     name = models.CharField(max_length=128)
     description = models.TextField()
     start_date = models.DateField(null=True)
@@ -38,7 +17,9 @@ class ProductModel(models.Model):
 
 
 class ProductChangesModel(models.Model):
-
+    """
+        Model to see all changes in Product
+    """
     product = models.ForeignKey('product.ProductModel', on_delete=models.SET_NULL, null=True)
     name_was = models.CharField(max_length=128)
     name_new = models.CharField(max_length=128)
