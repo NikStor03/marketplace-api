@@ -1,0 +1,6 @@
+# ignore environment folder and file
+./venv
+.env
+
+# ignore database
+./marketplace/db.sqlite3
