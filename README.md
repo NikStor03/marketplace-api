@@ -24,12 +24,12 @@ Tool for monitoring market products, day by day.
  6. Create supperuser `python3 manage.py createsuperuser` after enter all needest values.
  7. Start the api `python3 manage.py runserver`
 
-## Using
+## ⚙️ Using
 
 ### Add product
 For adding product you should send POST request to this directions `http://127.0.0.1:8000/api/add-product/`.
 Python3 example
-```
+```python
 import requests
 res = requests.post(
   "http://127.0.0.1:8000/api/add-product/", {
